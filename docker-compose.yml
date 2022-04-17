@@ -18,7 +18,11 @@ services:
       memlock:
         soft: -1
         hard: -1
-    mem_limit: "4g"
+    deploy:
+      resources:
+        limits:
+          cpus: 0.5
+          memory: 4G
 
     networks:
       - mysql-network
