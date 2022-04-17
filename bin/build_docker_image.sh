@@ -2,6 +2,7 @@
 
 # Get AbPath
 PROJECT_PATH=$(dirname $(cd $(dirname $0) && pwd -P))
+echo $PROJECT_PATH
 
 # load .env
 source $PROJECT_PATH/bin/loadenv.sh

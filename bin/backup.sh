@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Get AbPath
-PROJECT_PATH=$(dirname $(dirname $(realpath $0)))
+PROJECT_PATH=$(dirname $(cd $(dirname $0) && pwd -P))
 echo $PROJECT_PATH
 
 # load .env
