@@ -1,0 +1,35 @@
+# docker-compose.yml
+# Use root/example as user/password credentials
+version: '3.7'
+services:
+  database:
+    image: $PROJECT_DATABASE_NAME:mysql-$MYSQL_VERSION
+    container_name: $PROJECT_DATABASE_NAME
+    restart: always
+
+    env_file: .env
+    environment:
+      TZ: Asia/Seoul
+    cap_add:
+      - SYS_NICE
+    command: --default-authentication-plugin=mysql_native_password
+
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    mem_limit: "4g"
+
+    networks:
+      - mysql-network
+    ports:
+      - 3306:3306
+
+    volumes:
+      - ./db/conf.d:/etc/mysql/conf.d
+      - ./db/data:/var/lib/mysql
+      - ./db/initdb.d:/docker-entrypoint-initdb.d
+
+networks:
+  mysql-network:
+    driver: bridge

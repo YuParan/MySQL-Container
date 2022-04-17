@@ -1,0 +1,38 @@
+### Python template
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
+# Distribution / packaging
+.Python
+downloads/
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# logs
+*.log
+
+# OS garbage
+.DS_Store
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Pycharm Settings
+.idea/
+
+# VS Code Settings
+.vscode
+
+####  Individual Settings  ####
+# MySQL 시스템 환경 설정 파일
+.env
+
+# mysql 데이터 
+db/data/
+!db/data/.keep
+
+# mysql 백업 덤프 파일성
+db/dumps/
+!db/dumps/.keep
