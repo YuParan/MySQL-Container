@@ -21,8 +21,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: 0.5
-          memory: 4G
+          cpus: "0.5"
+          memory: "4G"
 
     networks:
       - mysql-network

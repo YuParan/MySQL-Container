@@ -33,6 +33,6 @@ pip-delete-this-directory.txt
 db/data/
 !db/data/.keep
 
-# mysql 백업 덤프 파일성
+# mysql 백업 덤프 파일
 db/dumps/
 !db/dumps/.keep
