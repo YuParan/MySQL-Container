@@ -64,9 +64,7 @@ Repository 에는 다음과 같이 `*` 표시된 경로 & 파일들이 빠져있
 프로젝트 DB 구성을 위해 `!` 표시된 파일들의 내용 수정이 필요합니다.
 - 대부분 시스템 환경 세팅은 `.env` 수정으로 변경됩니다.
 
-- Main Project Name 인 settings.py 가 있는 폴더의 이름 (현재는 `/nameless_server`) 은 environments.yaml 에 작성된 server name 과 동일해야 합니다.
-  
-  Docker Container 실행 환경 설정을 위해 `docker-compose.yml` 의 내용을 커스텀
+- Docker Container 실행 환경 설정은 `docker-compose.yml` 의 내용을 수정해서 적용할 수 있습니다.
 
 ---
 
@@ -88,6 +86,12 @@ Repository 에는 다음과 같이 `*` 표시된 경로 & 파일들이 빠져있
 5. 상황에 따라 아래 작성된 `Trouble Shooting` 의 첫번째 항목(root 계정의 외부 접근 막기)을 진행
 
    ( 동작 확인도 겸하여 `docker-container > mysql` 접속해서 user 권한 확인 해보는것을 권장 )
+
+6. docker-compose 중단
+
+   ```bash
+   docker-compose down
+   ```
 
 ---
 
