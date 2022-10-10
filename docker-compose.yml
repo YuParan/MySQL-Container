@@ -3,7 +3,7 @@
 version: '3.7'
 services:
   database:
-    image: $PROJECT_DATABASE_NAME:mysql-$MYSQL_VERSION
+    image: ${PROJECT_DATABASE_NAME}:mysql-${MYSQL_VERSION}
     container_name: $PROJECT_DATABASE_NAME
     restart: always
 
@@ -27,7 +27,7 @@ services:
     networks:
       - mysql-network
     ports:
-      - 3306:3306
+      - ${MYSQL_PORT}:3306
 
     volumes:
       - ./db/conf.d:/etc/mysql/conf.d

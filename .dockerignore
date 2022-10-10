@@ -1,0 +1,18 @@
+### Docker Ignore Template
+# OS garbage
+.DS_Store
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Pycharm Settings
+.idea/
+
+# VS Code Settings
+.vscode
+
+# Git
+.git
+
+####  Individual Settings  ####
+**/*.sql
